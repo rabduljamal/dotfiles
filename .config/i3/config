@@ -326,16 +326,16 @@ set $ws10 "10"
 #workspace $ws5 output HDMI-0
 
 # bind program to workspace and focus to them on startup:
-assign [class="Xfce4-terminal"] $ws1
+assign [class="wezterm"] $ws1
 assign [class="Code"] $ws2
 assign [class="Brave"] $ws3
 assign [class="thunderbird"] $ws4
 assign [class="TelegramDesktop"] $ws5
 
 # automatic set focus new window if it opens on another workspace than the current:
-for_window [class=Xfce4-terminal] focus
-for_window [class=(?i)firefox] focus
-for_window [class=Thunar] focus
+for_window [class=wezterm] focus
+for_window [class=Code] focus
+for_window [class=Brave] focus
 for_window [class=Thunderbird] focus
 for_window [class=TelegramDesktop] focus
 
@@ -366,7 +366,7 @@ for_window [class=TelegramDesktop] focus
 #exec_always --no-startup-id picom -b
 #
 # for custom config:
-#exec_always --no-startup-id picom --config  ~/.config/picom.conf
+exec_always --no-startup-id picom --config  ~/.config/picom.conf
 
 #############################################
 # autostart applications/services on login: #
@@ -401,7 +401,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
+exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/eos_wallpapers_community/Endy_vector_satelliet.png
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
