@@ -124,3 +124,5 @@ autoload -U add-zsh-hook
 add-zsh-hook chpwd auto_activate_venv
 auto_activate_venv
 eval "$(starship init zsh)"
+
+alias gp="sudo openconnect --syslog  --protocol=gp globalrsa-mitra.telkom.co.id --csd-wrapper=/home/rjamal/hipreport.sh --os=win"
